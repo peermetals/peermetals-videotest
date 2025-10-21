@@ -1,0 +1,28 @@
+{
+  "name": "peermetals-videoreels",
+  "version": "1.0.0",
+  "description": "Video reel generation for PeerMetals listings using Remotion",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "preview": "remotion studio src/index.js",
+    "render": "remotion render src/index.js ListingReel out/video.mp4",
+    "render:still": "remotion still src/index.js ListingReel out/thumbnail.png --frame=0",
+    "test:render": "node test-render.js",
+    "vercel-build": "echo 'Build complete'",
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@remotion/bundler": "*",
+    "@remotion/cli": "*",
+    "@remotion/player": "*",
+    "@remotion/renderer": "*",
+    "@remotion/zod-types": "*",
+    "@supabase/supabase-js": "^2.46.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remotion": "*",
+    "zod": "^3.22.3"
+  }
+}

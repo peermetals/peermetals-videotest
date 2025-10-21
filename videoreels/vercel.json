@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/render-video.js": {
+      "maxDuration": 900,
+      "memory": 3008
+    }
+  },
+  "buildCommand": "npm install",
+  "installCommand": "npm install"
+}
