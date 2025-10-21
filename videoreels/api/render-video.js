@@ -16,6 +16,11 @@ import fs from 'fs';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Determine the correct project root
+// In Vercel, __dirname will be /var/task/videoreels/api
+// We need to go up to /var/task/videoreels
+const projectRoot = path.join(__dirname, '..');
+
 // Initialize Supabase client
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL,
@@ -107,7 +112,7 @@ export default async function handler(req, res) {
 
     console.log('📦 Bundling Remotion project...');
     const bundleLocation = await bundle({
-      entryPoint: path.join(__dirname, '..', 'src', 'index.js'),
+      entryPoint: path.join(projectRoot, 'src', 'index.js'),
       webpackOverride: (config) => config,
     });
 
