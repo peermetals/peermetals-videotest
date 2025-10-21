@@ -2,8 +2,14 @@
   "version": 2,
   "functions": {
     "api/**/*.js": {
-      "maxDuration": 800,
+      "maxDuration": 300,
       "memory": 3008
     }
-  }
+  },
+  "includeFiles": [
+    "src/**",
+    "public/**",
+    "package.json",
+    "remotion.config.js"
+  ]
 }

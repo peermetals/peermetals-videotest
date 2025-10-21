@@ -218,6 +218,6 @@ export default async function handler(req, res) {
 
 // Export config for Vercel Serverless Functions
 export const config = {
-  maxDuration: 800, // 15 minutes with Fluid Compute (requires Pro plan)
+  maxDuration: 900, // 15 minutes with Fluid Compute (requires Pro plan)
   memory: 3008, // Maximum memory allocation
 };
